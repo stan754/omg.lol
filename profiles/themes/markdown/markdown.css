@@ -1,0 +1,130 @@
+:root {
+  --bg: #FAFAFA;
+	--fg: #202020;
+	--verified: white;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #202020;
+		--fg: #FAFAFA;
+		--verified: white;
+	}
+}
+
+html, body {
+	min-height: 100vh;
+}
+
+main {
+  text-align: left;
+  background: unset;
+	padding: 1.5em;
+}
+
+body {
+	background: var(--bg);
+	padding: unset;
+}
+
+body, a, a:link, a:visited {
+	color: var(--fg);
+}
+
+#pronouns>a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+#pronouns {
+  color: var(--fg);
+  opacity: 1;
+}
+
+#verification {
+	color: var(--verified) !important;
+}
+
+#name {
+	font-size: 1.5em;
+}
+
+#pronouns,
+#location,
+#occupation {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#profile-picture-container {
+  display: none;
+}
+
+.metadata {
+  display: block;
+}
+
+#location:before {
+  content: "| location: ";
+  opacity: 0.5;
+}
+
+#occupation:before {
+  content: "| occupation: ";
+  opacity: 0.5;
+}
+
+#pronouns:before {
+  content: "| pronouns: ";
+  opacity: 0.5;
+}
+
+#name:before {
+  content: "# ";
+  opacity: 0.5;
+}
+
+h1:not(#name):before {
+  content: "## ";
+  opacity: 0.5;
+}
+
+h2:before {
+  content: "## ";
+  opacity: 0.5;
+}
+
+h3:before {
+  content: "### ";
+  opacity: 0.5;
+}
+
+i[class^="fa"] {
+  display: none;
+}
+
+span.fa-li>i[class^="omg"] {
+  display: none;
+}
+
+span[class="fa-li"]:before {
+  content: "- ";
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+
+/*
+To add a "comment" with the name of the link behind it you can use
+
+a[href^="https://social.lol/"]:after {
+  content: " //Mastodon";
+  opacity: 0.5;
+}
+
+and replace the href with the link and the content with what you want as a comment.
+*/
